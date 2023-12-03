@@ -1,0 +1,185 @@
+*,
+*::before,
+*::after  {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg_clr: #5900de;
+  --primary_text_clr: white;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg_clr);
+  color: var(--primary_text_clr);
+}
+
+header {
+  padding-block: 2rem;
+  max-height: 6.6rem;
+  background-color: red;
+  text-align: center;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+header a{
+  font-size: clamp(1.3rem, 7vw + 0.5rem, 4rem);
+  -webkit-text-stroke: .1rem whitesmoke;
+  text-decoration: none;
+  color: transparent;
+  font-weight: 700;
+}
+
+.flowting_cursor {
+  width: 4rem;
+  height: 4rem;
+  background-color: red;
+  position: fixed;
+  filter: blur(1rem);
+  border-radius: 50%;
+  transition: all 0.5s ease-out;
+}
+
+#game_wrapper {
+  height: calc(100vh - 6.6rem);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game_container {
+  width: clamp(120px, 84vw + 1rem, 500px);
+  height: 70vh;
+  background-color: black;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.game_card {
+  background-color: transparent;
+  border: transparent;
+  font-size: 2rem;
+  width: 100%;
+  border-bottom: .3rem solid rgba(204, 204, 204, 0.562);
+  border-radius: 1rem;
+  mix-blend-mode: luminosity;
+  transition: all ease-out 1s;
+}
+
+.game_card h1 {
+  font-size: clamp(1rem, 10vw + 0.5rem, 4em);
+}
+
+.user, .ai {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: clamp(1rem, 5vw + 1rem, 4rem);
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+:is(.user, .ai) label {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+:is(.user, .ai) input {
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 2rem;
+}
+
+.box:nth-child(3) h2 {
+  color: red;
+  grid-column: span 3;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.box:nth-child(3) > :is(.wins, .lost) {
+  grid-column: span 2;
+}
+
+.wins, .lost {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: clamp(1rem, 5vw + 1rem, 4rem);
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+:is(.wins, .lost) label {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+:is(.wins, .lost) input {
+  border: transparent;
+  outline: transparent;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 2rem;
+}
+
+.box:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.box:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start_game {
+  margin-top: .5rem;
+  border: transparent;
+  outline: transparent;
+  padding: 1rem 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease-out .2s;
+}
+
+#start_game:focus {
+  background-color: red;
+}

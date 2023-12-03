@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TITLE -->
+    <title>Rohit First Webpage</title>
+    <!-- PROJECT CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flowting_cursor"></div>
+    <header>
+        <a href="">Rock Paper Sccissors</a>
+    </header>
+
+    <!-- GAME -->
+    <div id="game_wrapper">
+      <div class="game_container">
+        <div class="box">
+          <button class="game_card">
+            <h1 title="rock">🥊</h1>
+          </button>
+          <button class="game_card">
+            <h1 title="paper">🤚</h1>
+          </button>
+          <button class="game_card">
+            <h1 title="scissors">✂️</h1>
+          </button>
+        </div>
+
+
+        <div class="box">
+          <div class="user">
+            <label for="user">You:&nbsp;</label>
+            <input type="text" id="user" readonly placeholder="No Value"/>
+          </div>
+
+          <div class="ai">
+            <label for="ai">AI:&nbsp;</label>
+            <input type="text" id="ai" readonly placeholder="No Value"/>
+          </div>
+        </div>
+
+
+        <div class="box">
+            <h2>SCORE</h2>
+
+            <div class="wins">
+              <label for="wins">Wins:&nbsp;</label>
+              <input type="text" id="wins" readonly placeholder="No Value"/>
+            </div>
+  
+            <div class="lost">
+              <label for="lost">Lost:&nbsp;</label>
+              <input type="text" id="lost" readonly placeholder="No Value"/>
+            </div>
+        </div>
+
+
+        <div class="box">
+          <button id="start_game">
+            start
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="logic.js"></script>
+  </body>
+</html>
